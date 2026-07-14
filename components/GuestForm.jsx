@@ -2,40 +2,26 @@ import { addGuest } from "@/app/actions";
 
 export default function GuestForm() {
   return (
-    <form action={addGuest} style={{ marginBottom: "40px" }}>
+    <form action={addGuest} className="guestForm">
+
       <input
         type="text"
         name="name"
         placeholder="Your Name"
         required
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "15px",
-        }}
       />
 
       <textarea
         name="message"
-        placeholder="Write your message..."
-        required
+        placeholder="Write something nice..."
         rows="5"
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "15px",
-        }}
+        required
       />
 
-      <button
-        type="submit"
-        style={{
-          padding: "10px 20px",
-          cursor: "pointer",
-        }}
-      >
+      <button type="submit">
         Leave Message
       </button>
+
     </form>
   );
 }
